@@ -4,27 +4,31 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-      "start": "NODE_ENV=production node index.js",
-      "test": "NODE_ENV=test jest --verbose --runInBand",
-      "dev": "NODE_ENV=development nodemon index.js"
+        "start": "NODE_ENV=production node index.js",
+        "test": "NODE_ENV=test jest --verbose --runInBand",
+        "dev": "NODE_ENV=development nodemon index.js"
     },
     "author": "alan",
     "license": "MIT",
     "dependencies": {
-      "bcrypt": "^5.1.1",
-      "cors": "^2.8.5",
-      "dotenv": "^16.3.1",
-      "express": "^4.18.2",
-      "express-async-errors": "^3.1.1",
-      "jsonwebtoken": "^9.0.2",
-      "mongoose": "^8.0.3",
-      "multer": "^1.4.5-lts.1"
+        "bcrypt": "^5.1.1",
+        "cors": "^2.8.5",
+        "dotenv": "^16.3.1",
+        "ejs": "^3.1.9",
+        "express": "^4.18.2",
+        "express-async-errors": "^3.1.1",
+        "express-session": "^1.18.0",
+        "jsonwebtoken": "^9.0.2",
+        "mongoose": "^8.0.3",
+        "multer": "^1.4.5-lts.1",
+        "passport": "^0.7.0",
+        "passport-google-oauth20": "^2.0.0"
     },
     "devDependencies": {
-      "mz": "^2.7.0",
-      "nodemon": "^3.0.2"
+        "mz": "^2.7.0",
+        "nodemon": "^3.0.2"
     },
     "jest": {
-      "testEnvironment": "node"
+        "testEnvironment": "node"
     }
-  }
+}
