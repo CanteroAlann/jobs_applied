@@ -1,9 +1,13 @@
-const config = require('./utils/config')
-const logger = require('./utils/logger')
-const app = require('./app')
+const express = require('express');
 
+const app = express();
 
-const PORT = config.PORT || 8001
-app.listen(PORT, () => {
-    logger.info(`Server running on port ${PORT}`)
-})
+app.use(express.json());
+
+app.use('/',(req, res) => {
+    return res.status(200).json({ message: 'Hello from jobs service' })
+});
+
+app.listen(8001, () => {
+    console.log('Jobs service is running on port 8001');
+});
