@@ -35,6 +35,6 @@ mongoose.connect(config.MONGODB_URI)
 
 app.use(middleware.requestLogger)
 
-app.use('/login', loginRouter);
+app.use('/', loginRouter);
 
 module.exports = app;
