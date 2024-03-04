@@ -1,4 +1,5 @@
 const mongoose = require('mongoose')
+const findOrCreate = require('mongoose-findorcreate')
 
 const userSchema = new mongoose.Schema({
     username: String,
@@ -6,6 +7,8 @@ const userSchema = new mongoose.Schema({
     passwordHash: String,
 
 })
+
+userSchema.plugin(findOrCreate)
 
 userSchema.set('toJSON', {
     transform: (document, returnedObject) => {
@@ -16,6 +19,8 @@ userSchema.set('toJSON', {
         delete returnedObject.passwordHash
     }
 })
+
+
 
 const User = mongoose.model('User', userSchema)
 

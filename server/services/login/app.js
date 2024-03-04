@@ -37,4 +37,11 @@ app.use(middleware.requestLogger)
 
 app.use('/', loginRouter);
 
+
+app.get('/success', (req, res) => {
+    const { displayName } = req.user
+    res.send('Hello ' + displayName + '!')
+
+})
+
 module.exports = app;
